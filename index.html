@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es-AR">
   <head>
@@ -5,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO BÁSICO -->
-    <title>ZETA BARBER — Barbería en San Juan | Cortes, Fade y Barba</title>
+    <title>ZETA BARBER | Cortes que hablan por vos.</title>
     <meta
       name="description"
-      content="Barbería profesional en San Juan. Especialistas en cortes clásicos, degradés (fade), perfilado de barba y estilo masculino. Reservá tu turno por WhatsApp."
+      content="Barbería en San Juan. Especialistas en degradés (fade), perfilado de barba y estilo masculino. Reservá tu turno por WhatsApp."
     />
     <meta
       name="keywords"
       content="barberia san juan, zeta barber, corte de pelo hombre, fade, degradé, perfilado de barba, barberia cerca de mi"
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://zetabarber.com.ar/" />
+    <link rel="canonical" href="[https://zeta-barber-web.vercel.app/](https://zeta-barber-web.vercel.app/)" />
 
     <!-- FAVICON PARA PESTAÑAS Y GOOGLE SEARCH -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png" />
@@ -40,18 +41,18 @@
       property="og:description"
       content="Cortes precisos, degradés y atención personalizada. Reservá tu turno online."
     />
-    <meta property="og:image" content="/assets/corte.png" />
-    <meta property="og:url" content="https://zetabarber.com.ar/" />
+    <meta property="og:image" content="assets/corte.png" />
+    <meta property="og:url" content="[https://zeta-barber-web.vercel.app/](https://zeta-barber-web.vercel.app/)" />
     <meta property="og:site_name" content="Zeta Barber" />
 
     <!-- SCHEMA.ORG (JSON-LD) -->
     <script type="application/ld+json">
       {
-        "@context": "https://schema.org",
+        "@context": "[https://schema.org](https://schema.org)",
         "@type": "BarberShop",
         "name": "ZETA BARBER",
-        "image": "/assets/corte.png",
-        "url": "https://zetabarber.com.ar/",
+        "image": "assets/corte.png",
+        "url": "[https://zeta-barber-web.vercel.app/](https://zeta-barber-web.vercel.app/)",
         "telephone": "+5492644043349",
         "priceRange": "$$",
         "address": {
@@ -73,10 +74,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- ELEMENTOS PARA EL CURSOR CUSTOM PREMIUM -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
     <div id="site">
+
       <!-- NAVBAR -->
       <header class="nav">
-        <a class="logo" href="#inicio" aria-label="Zeta Barber inicio">
+        <a class="logo" href="assets/logo.png" aria-label="Zeta Barber inicio">
           <img
             src="assets/logo.png"
             alt="ZETA BARBER Logo"
@@ -86,9 +92,11 @@
         </a>
         <nav class="navlinks" aria-label="Navegación principal">
           <a href="#ecosistema">Ecosistema</a>
+          <a href="#lookbook">Lookbook</a>
           <a href="#servicios">Servicios</a>
+          <a href="#equipo">Equipo</a>
+          <a href="#faq">FAQ</a>
           <a href="#sucursales">Ubicación</a>
-          <a href="#nosotros">Nosotros</a>
         </nav>
         <a class="book" href="#turnos">Reservar turno ↗</a>
       </header>
@@ -99,7 +107,7 @@
           <div class="hero-copy">
             <div class="eyebrow">Barbería · Estilo · Precisión</div>
             <h1>Tu estilo. <span>Tus reglas.</span></h1>
-            <p class="lead">Barbería en San Juan. Cortes que hablan por vos.</p>
+            <p class="lead">Cortes que hablan por vos.</p>
             <div class="hero-actions">
               <a class="primary" href="#turnos">Reservá tu turno ↗</a>
               <a class="textlink" href="#servicios">Ver servicios</a>
@@ -110,7 +118,7 @@
           <div class="hero-art" aria-label="Corte Zeta Barber San Juan">
             <div class="art-frame"></div>
             <img
-              src="/assets/corte.png"
+              src="assets/corte.png"
               alt="Corte degradé masculino en Zeta Barber San Juan"
               class="hero-img"
               loading="eager"
@@ -118,9 +126,17 @@
               height="800"
             />
             <div class="art-caption">Corte limpio. Actitud propia.</div>
-            <div class="art-number">EST. ZETA / BARBER CULTURE</div>
+            <div class="art-number">ESTILO ZETA / BARBER CULTURE</div>
           </div>
         </section>
+
+        <!-- OP 2: MARQUEE INFINITO (TEXTO EN MOVIMIENTO) -->
+        <div class="marquee-container" aria-hidden="true">
+          <div class="marquee-track">
+            <span>ZETA BARBER — RESERVÁ TU TURNO —&nbsp;</span>
+            <span>ZETA BARBER — RESERVÁ TU TURNO —&nbsp;</span>
+          </div>
+        </div>
 
         <!-- STRIP BANNER -->
         <div class="strip">
@@ -128,8 +144,7 @@
             <strong>01 / Precisión</strong><span>Cada detalle importa</span>
           </div>
           <div class="strip-item">
-            <strong>02 / Identidad</strong
-            ><span>Un estilo que habla por vos</span>
+            <strong>02 / Identidad</strong><span>Un estilo que habla por vos</span>
           </div>
           <div class="strip-item">
             <strong>03 / Experiencia</strong><span>Tu momento, tu espacio</span>
@@ -167,7 +182,7 @@
               <span class="service-num">02 — CULTURA</span>
               <h3>Estilo & Asesoramiento</h3>
               <p>
-                Te guiamos para encontrar el corte y diseño de barba que mejor
+                Te guiamos para encontrar el corte y diseño que mejor
                 se adapta a la forma de tu rostro.
               </p>
               <a
@@ -181,7 +196,7 @@
               <span class="service-num">03 — ESPACIO</span>
               <h3>Experiencia ZETA</h3>
               <p>
-                Un espacio moderno pensado para bajar un cambio, renovar tu look
+                Un espacio pensado para bajar un cambio, renovar tu look
                 y salir con total confianza.
               </p>
               <a
@@ -190,6 +205,40 @@
                 style="align-self: flex-start; margin-top: 22px"
                 >Sobre nosotros ↗</a
               >
+            </article>
+          </div>
+        </section>
+
+        <!-- OP 1: GALERÍA / LOOKBOOK -->
+        <section class="section" id="lookbook">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Lookbook</div>
+              <h2>Nuestros Trabajos.</h2>
+            </div>
+            <p class="section-note">Elegí el estilo que mejor va con vos y solicitalo directamente en tu reserva.</p>
+          </div>
+          <div class="lookbook-grid">
+            <article class="lookbook-card">
+              <img src="assets/corte.png" alt="Mid Fade / Texturizado" class="lookbook-img" />
+              <div class="lookbook-overlay">
+                <h4>Mid Fade / Texturizado</h4>
+                <a href="#turnos" onclick="selectStyle('Degradé / fade')" class="primary lookbook-btn">Quiero este estilo ↗</a>
+              </div>
+            </article>
+            <article class="lookbook-card">
+              <img src="assets/corte.png" alt="Perfilado de barba" class="lookbook-img" />
+              <div class="lookbook-overlay">
+                <h4>Perfilado & Sculpting</h4>
+                <a href="#turnos" onclick="selectStyle('Perfilado de barba')" class="primary lookbook-btn">Quiero este estilo ↗</a>
+              </div>
+            </article>
+            <article class="lookbook-card">
+              <img src="assets/corte.png" alt="Corte clásico sofisticado" class="lookbook-img" />
+              <div class="lookbook-overlay">
+                <h4>Classic Gentleman</h4>
+                <a href="#turnos" onclick="selectStyle('Corte clásico / moderno')" class="primary lookbook-btn">Quiero este estilo ↗</a>
+              </div>
             </article>
           </div>
         </section>
@@ -260,6 +309,29 @@
           </div>
         </section>
 
+        <!-- OP 1: EQUIPO / STAFF -->
+        <section class="section" id="equipo">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">El Staff</div>
+              <h2>Especialistas.</h2>
+            </div>
+            <p class="section-note">Profesionales enfocados en llevar tu look al siguiente nivel.</p>
+          </div>
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-avatar">ZETA</div>
+              <h3>Barbero Principal</h3>
+              <p>Especialista en Fades, cortes urbanos y diseño de barba.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar">STAFF</div>
+              <h3>Atención & Asesoramiento</h3>
+              <p>Expertos en morfología facial y cuidado masculino integral.</p>
+            </div>
+          </div>
+        </section>
+
         <!-- STATEMENT / SOBRE NOSOTROS -->
         <section class="statement" id="nosotros">
           <div>
@@ -273,7 +345,31 @@
           </p>
         </section>
 
-        <!-- SUCURSALES / UBICACIÓN -->
+        <!-- OP 3: PREGUNTAS FRECUENTES (FAQ) -->
+        <section class="section" id="faq">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Respuestas Rápidas</div>
+              <h2>Preguntas Frecuentes.</h2>
+            </div>
+          </div>
+          <div class="faq-container">
+            <details class="faq-item">
+              <summary>¿Trabajan con turno previo o por orden de llegada?</summary>
+              <p>Trabajamos principalmente con reserva previa vía WhatsApp para asegurar la mejor atención sin demoras. Si estás por la zona, podés consultar disponibilidad en el momento.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Qué medios de pago aceptan?</summary>
+              <p>Aceptamos pagos en efectivo, transferencias bancarias y Mercado Pago.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Qué pasa si necesito cancelar o reprogramar mi turno?</summary>
+              <p>Te pedimos que nos avises con al menos 2 horas de anticipación por WhatsApp para reorganizar la agenda y liberar la disponibilidad.</p>
+            </details>
+          </div>
+        </section>
+
+        <!-- SUCURSALES / UBICACIÓN Y MAPA -->
         <section class="section" id="sucursales">
           <div class="section-head">
             <div>
@@ -297,6 +393,18 @@
               >
             </article>
           </div>
+          <!-- OP 3: GOOGLE MAPS INTEGRADO -->
+          <div class="map-wrapper" style="margin-top: 30px;">
+            <iframe 
+              title="Ubicación Zeta Barber San Juan"
+              src="[https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.000000000000!2d-68.5364!3d-31.5375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMyJzE1LjAiUyA2OMKwMzInM1LjAiVw!5e0!3m2!1ses!2sar!4v1600000000000!5m2!1ses!2sar](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.000000000000!2d-68.5364!3d-31.5375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMyJzE1LjAiUyA2OMKwMzInM1LjAiVw!5e0!3m2!1ses!2sar!4v1600000000000!5m2!1ses!2sar)" 
+              width="100%" 
+              height="380" 
+              style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
         </section>
 
         <!-- RESERVA POR WHATSAPP -->
@@ -310,10 +418,8 @@
               enviarlo por WhatsApp.
             </p>
             <p>
-              <strong>Ubicación:</strong> Calle 14 y Alfonso 13, San Juan<br /><strong
-                >Consultas:</strong
-              >
-              Atención directa por WhatsApp
+              <strong>Ubicación:</strong> Calle 14 y Alfonso 13, San Juan<br />
+              <strong>Consultas:</strong> Atención directa por WhatsApp
             </p>
           </div>
           <form class="booking-form" id="bookingForm">
@@ -322,13 +428,19 @@
               <input id="name" name="name" placeholder="Tu nombre" required />
             </div>
             <div class="field">
+              <label for="barber">Barbero de preferencia (Opcional)</label>
+              <select id="barber" name="barber">
+                <option value="Sin preferencia">Sin preferencia</option>
+                <option value="Barbero Principal">Barbero Principal</option>
+                <option value="Staff Zeta">Staff Zeta</option>
+              </select>
+            </div>
+            <div class="field">
               <label for="service">Servicio o consulta</label>
               <select id="service" name="service" required>
                 <option value="">Elegí un servicio</option>
-                <option>Corte clásico / moderno</option>
+                <option>Corte que quieras</option>
                 <option>Degradé / fade</option>
-                <option>Perfilado de barba</option>
-                <option>Corte + barba</option>
                 <option>Contornos</option>
                 <option>Consulta general</option>
               </select>
@@ -358,7 +470,7 @@
       <footer class="footer-advanced">
         <div class="footer-content">
           <div class="footer-brand">
-            <a class="logo" href="assets/logo.png"><span>Z</span>ZETA BARBER</a>
+            <a class="logo" href="#inicio"><span>Z</span>ZETA BARBER</a>
             <p>
               Estilo, precisión y presencia en cada detalle. Tu barbería de
               confianza en San Juan.
@@ -368,8 +480,9 @@
             <h4>Navegación</h4>
             <ul>
               <li><a href="#inicio">Inicio</a></li>
-              <li><a href="#ecosistema">Ecosistema</a></li>
+              <li><a href="#lookbook">Lookbook</a></li>
               <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#equipo">Equipo</a></li>
               <li><a href="#sucursales">Ubicación</a></li>
               <li><a href="#turnos">Turnos</a></li>
             </ul>
@@ -414,7 +527,7 @@
             <p>📍 Calle 14 y Alfonso 13, San Juan, Argentina</p>
             <p>📱 WhatsApp: +54 9 264 404-3349</p>
             <a
-              href="https://maps.google.com/?q=Calle+14+y+Alfonso+13+San+Juan"
+              href="[https://maps.google.com/?q=Calle+14+y+Alfonso+13+San+Juan](https://maps.google.com/?q=Calle+14+y+Alfonso+13+San+Juan)"
               target="_blank"
               rel="noopener noreferrer"
               class="footer-map-link"
@@ -431,7 +544,7 @@
           <span
             >Desarrollado por
             <a
-              href="https://instagram.com/florecestudio.ar"
+              href="[https://instagram.com/florecestudio.ar](https://instagram.com/florecestudio.ar)"
               target="_blank"
               rel="noopener noreferrer"
               >@florecestudio.ar</a
@@ -442,7 +555,7 @@
 
       <!-- BOTÓN FLOTANTE DE WHATSAPP -->
       <a
-        href="https://wa.me/5492644043349?text=Hola,%20ZETA%20BARBER.%20Quiero%20consultar%20por%20un%20turno."
+        href="[https://wa.me/5492644043349?text=Hola,%20ZETA%20BARBER.%20Quiero%20consultar%20por%20un%20turno](https://wa.me/5492644043349?text=Hola,%20ZETA%20BARBER.%20Quiero%20consultar%20por%20un%20turno)."
         target="_blank"
         rel="noopener noreferrer"
         class="whatsapp-float"

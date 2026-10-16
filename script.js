@@ -21,12 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     bookingForm.addEventListener('submit', function(event) {
       event.preventDefault();
       const name = document.getElementById('name').value.trim();
+      const barber = document.getElementById('barber') ? document.getElementById('barber').value : '';
       const service = document.getElementById('service').value;
       const date = document.getElementById('date').value;
       const time = document.getElementById('time').value;
       
       const details = [
         `Hola, ZETA BARBER. Soy ${name}.`,
+        barber && barber !== 'Sin preferencia' ? `Barbero de preferencia: ${barber}.` : '',
         `Quiero consultar por: ${service}.`,
         date ? `Día preferido: ${date}.` : '',
         time ? `Horario preferido: ${time}.` : '',
@@ -64,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     animateCursor();
 
-    const interactiveElements = document.querySelectorAll('a, button, input, select, .service, .hero-art');
+    const interactiveElements = document.querySelectorAll('a, button, input, select, .service, .hero-art, .lookbook-card, .team-card, .faq-item');
     interactiveElements.forEach(el => {
       el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
       el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
@@ -72,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 5. REVELADO AL HACER SCROLL (INTERSECTION OBSERVER)
-  const revealElements = document.querySelectorAll('.hero-copy, .section-head, .service, .strip-item, .statement, .booking-copy, .booking-form');
+  const revealElements = document.querySelectorAll('.hero-copy, .section-head, .service, .strip-item, .statement, .booking-copy, .booking-form, .lookbook-card, .team-card, .faq-item, .map-wrapper');
 
   revealElements.forEach(el => el.classList.add('reveal-on-scroll'));
 
@@ -91,7 +93,14 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(el => revealObserver.observe(el));
 });
 
-/* 6. FUNCIONES GLOBALES PARA MODALES LEGALES */
+/* 6. FUNCIONES GLOBALES (LOOKBOOK & MODALES LEGALES) */
+function selectStyle(serviceName) {
+  const serviceSelect = document.getElementById('service');
+  if (serviceSelect) {
+    serviceSelect.value = serviceName;
+  }
+}
+
 const legalTexts = {
   privacidad: `
     <h2>Política de Privacidad</h2>
@@ -134,7 +143,6 @@ function closeModal() {
   }
 }
 
-// Cerrar modal al hacer clic fuera del contenido
 document.addEventListener('click', function(e) {
   const modal = document.getElementById('legalModal');
   if (modal && e.target === modal) {
