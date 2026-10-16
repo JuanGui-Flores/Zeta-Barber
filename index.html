@@ -11,7 +11,7 @@
 
   <!-- NAVBAR -->
   <header class="nav">
-    <a class="logo" href="#inicio" aria-label="Zeta Barber inicio"><span>Z</span>ZETA BARBER</a>
+    <a class="logo" href="assets/logo.png" aria-label="Zeta Barber inicio"><span>Z</span>ZETA BARBER</a>
     <nav class="navlinks">
       <a href="#ecosistema">Ecosistema</a>
       <a href="#servicios">Servicios</a>
@@ -33,9 +33,11 @@
           <a class="textlink" href="#servicios">Ver servicios</a>
         </div>
       </div>
-      <div class="hero-art" aria-label="Diseño abstracto de Zeta Barber">
+
+      <!-- HERO ARTWORK CON FOTO -->
+      <div class="hero-art" aria-label="Corte Zeta Barber">
         <div class="art-frame"></div>
-        <div class="art-circle"><div class="art-mark">ZB</div></div>
+        <img src="assets/corte.png" alt="Corte de pelo Zeta Barber" class="hero-img">
         <div class="art-caption">Corte limpio. Actitud propia.</div>
         <div class="art-number">EST. ZETA / BARBER CULTURE</div>
       </div>
@@ -211,7 +213,7 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-const WHATSAPP_NUMBER = '5492644043349'; // Número de WhatsApp de ZETA BARBER
+const WHATSAPP_NUMBER = '5492644043349';
 const dateInput = document.getElementById('date');
 const today = new Date();
 const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0,10);
