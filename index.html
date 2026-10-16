@@ -1,18 +1,88 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZETA BARBER — Barbería & Estilo</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO BÁSICO -->
+  <title>ZETA BARBER — Barbería en San Juan | Cortes, Fade y Barba</title>
+  <meta name="description" content="Barbería profesional en San Juan. Especialistas en cortes clásicos, degradés (fade), perfilado de barba y estilo masculino. Reservá tu turno por WhatsApp.">
+  <meta name="keywords" content="barberia san juan, zeta barber, corte de pelo hombre, fade, degradé, perfilado de barba, barberia cerca de mi">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://zetabarber.com.ar/">
+
+  <!-- GEO-LOCALIZACIÓN Y SEO LOCAL -->
+  <meta name="geo.region" content="AR-J">
+  <meta name="geo.placename" content="San Juan">
+  <meta name="geo.position" content="-31.5375;-68.5364">
+  <meta name="ICBM" content="-31.5375, -68.5364">
+
+  <!-- OPEN GRAPH / SOCIAL MEDIA (WhatsApp, Instagram, FB) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="ZETA BARBER — Barbería & Estilo Masculino">
+  <meta property="og:description" content="Cortes precisos, degradés y atención personalizada. Reservá tu turno online.">
+  <meta property="og:image" content="corte.jpg">
+  <meta property="og:url" content="https://zetabarber.com.ar/">
+  <meta property="og:site_name" content="Zeta Barber">
+
+  <!-- TWITTER CARDS -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ZETA BARBER — Barbería & Estilo">
+  <meta name="twitter:description" content="Cortes precisos, detalles cuidados y la mejor experiencia de barbería.">
+  <meta name="twitter:image" content="corte.jpg">
+
+  <!-- SCHEMA.ORG / DATOS ESTRUCTURADOS PARA IA Y GEO (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "name": "ZETA BARBER",
+    "image": "corte.jpg",
+    "url": "https://zetabarber.com.ar/",
+    "telephone": "+5492644043349",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle 14 y Alfonso 13",
+      "addressLocality": "San Juan",
+      "addressRegion": "San Juan",
+      "postalCode": "5400",
+      "addressCountry": "AR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-31.5375",
+      "longitude": "-68.5364"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    "sameAs": [
+      "https://instagram.com/florecestudio.ar"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div id="site">
 
   <!-- NAVBAR -->
   <header class="nav">
-    <a class="logo" href="assets/logo.png" aria-label="Zeta Barber inicio"><span>Z</span>ZETA BARBER</a>
-    <nav class="navlinks">
+    <a class="logo" href="#inicio" aria-label="Zeta Barber inicio"><span>Z</span>ZETA BARBER</a>
+    <nav class="navlinks" aria-label="Navegación principal">
       <a href="#ecosistema">Ecosistema</a>
       <a href="#servicios">Servicios</a>
       <a href="#sucursales">Ubicación</a>
@@ -26,18 +96,18 @@
     <section class="hero" id="inicio">
       <div class="hero-copy">
         <div class="eyebrow">Barbería · Estilo · Precisión</div>
-        <h1>Tu estilo. <span>Tu marca.</span></h1>
-        <p class="lead">Barbería, atención personalizada y cuidado personal. Descubrí la experiencia ZETA y reservá tu lugar.</p>
+        <h1>Tu estilo. <span>Tus reglas.</span></h1>
+        <p class="lead">Barbería en San Juan. Cortes que hablan por vos y atención enfocada en los detalles.</p>
         <div class="hero-actions">
           <a class="primary" href="#turnos">Reservá tu turno ↗</a>
           <a class="textlink" href="#servicios">Ver servicios</a>
         </div>
       </div>
 
-      <!-- HERO ARTWORK CON FOTO -->
-      <div class="hero-art" aria-label="Corte Zeta Barber">
+      <!-- HERO ARTWORK CON FOTO DE CORTE -->
+      <div class="hero-art" aria-label="Corte Zeta Barber San Juan">
         <div class="art-frame"></div>
-        <img src="assets/corte.png" alt="Corte de pelo Zeta Barber" class="hero-img">
+        <img src="assets/corte.png" alt="Corte degradé masculino en Zeta Barber San Juan" class="hero-img" loading="eager" width="600" height="800">
         <div class="art-caption">Corte limpio. Actitud propia.</div>
         <div class="art-number">EST. ZETA / BARBER CULTURE</div>
       </div>
@@ -62,8 +132,8 @@
       <div class="services">
         <article class="service">
           <span class="service-num">01 — SERVICIO</span>
-          <h3>Barbería</h3>
-          <p>Reservá tu turno y viví la experiencia ZETA con atención enfocada en los detalles.</p>
+          <h3>Barbería Profesional</h3>
+          <p>Reservá tu turno y viví la experiencia ZETA con atención enfocada en la simetría y terminaciones.</p>
           <a class="textlink" href="#turnos" style="align-self:flex-start;margin-top:22px">Reservar turno ↗</a>
         </article>
         <article class="service">
@@ -146,11 +216,11 @@
           <div class="eyebrow">Nuestra Sede</div>
           <h2>Ubicación.</h2>
         </div>
-        <p class="section-note">Encontrá nuestro espacio y accedé rápido a tu reserva o consulta.</p>
+        <p class="section-note">Encontrá nuestro espacio en San Juan y accedé rápido a tu reserva.</p>
       </div>
       <div class="services">
         <article class="service" style="grid-column: span 3;">
-          <span class="service-num">SEDE CENTRAL</span>
+          <span class="service-num">SEDE CENTRAL — SAN JUAN</span>
           <h3>ZETA BARBER — Calle 14 y Alfonso 13</h3>
           <p>Atención personalizada con reserva previa vía WhatsApp.</p>
           <a class="primary" href="#turnos" style="align-self:flex-start;margin-top:20px">Agendar turno aquí ↗</a>
@@ -164,7 +234,7 @@
         <div class="eyebrow">Tu próximo corte</div>
         <h2>Hablemos<br>por WhatsApp.</h2>
         <p>Consultá por servicios, disponibilidad y turnos directamente con ZETA BARBER. Completá tus datos y prepararemos el mensaje para enviarlo por WhatsApp.</p>
-        <p><strong>Ubicación:</strong> Calle 14 y Alfonso 13<br><strong>Consultas:</strong> Atención por WhatsApp</p>
+        <p><strong>Ubicación:</strong> Calle 14 y Alfonso 13, San Juan<br><strong>Consultas:</strong> Atención directa por WhatsApp</p>
       </div>
       <form class="booking-form" id="bookingForm">
         <div class="field">
@@ -202,12 +272,35 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <span>© <span id="year"></span> ZETA BARBER</span>
-    <span>Desarrollado por <a href="https://instagram.com/florecestudio.ar" target="_blank" rel="noopener noreferrer">@florecestudio.ar</a></span>
-    <span>Estilo en cada detalle.</span>
-    <a href="#inicio">Volver arriba ↑</a>
+  <!-- FOOTER ATRACTIVO Y COMPLETO -->
+  <footer class="footer-advanced">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a class="logo" href="assets/logo.png" target="_blank" rel="noopener noreferrer"><span>Z</span>ZETA BARBER</a>
+        <p>Estilo, precisión y presencia en cada detalle. Tu barbería de confianza en San Juan.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#ecosistema">Ecosistema</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#sucursales">Ubicación</a></li>
+          <li><a href="#turnos">Turnos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ubicación & Contacto</h4>
+        <p>📍 Calle 14 y Alfonso 13, San Juan, Argentina</p>
+        <p>📱 WhatsApp: +54 9 264 404-3349</p>
+        <a href="https://maps.google.com/?q=Calle+14+y+Alfonso+13+San+Juan" target="_blank" rel="noopener noreferrer" class="footer-map-link">Ver en Google Maps ↗</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> ZETA BARBER. Todos los derechos reservados.</span>
+      <span>Desarrollado por <a href="https://instagram.com/florecestudio.ar" target="_blank" rel="noopener noreferrer">@florecestudio.ar</a></span>
+    </div>
   </footer>
 </div>
 
