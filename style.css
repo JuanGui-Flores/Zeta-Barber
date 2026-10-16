@@ -852,10 +852,12 @@ h2 {
   opacity: 0.6;
 }
 
-/* CURSOR CUSTOM PREMIUM */
+/* =========================================================
+   CURSOR CUSTOM PREMIUM (Punto blanco fijo + Aro con retardo)
+   ========================================================= */
 @media (pointer: fine) {
   body {
-    cursor: none;
+    cursor: none; /* Oculta el cursor nativo en computadoras */
   }
 
   .cursor-dot,
@@ -864,45 +866,50 @@ h2 {
     top: 0;
     left: 0;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 99999;
     border-radius: 50%;
     transform: translate3d(-100px, -100px, 0);
     will-change: transform;
   }
 
+  /* Punto central totalmente blanco con inversión inteligente para fondos claros */
   .cursor-dot {
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     background-color: #ffffff;
-    margin-top: -3px;
-    margin-left: -3px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    mix-blend-mode: difference; /* Esto hace que se adapte y siempre resalte sin importar el fondo */
+    margin-top: -4px;
+    margin-left: -4px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
   }
 
+  /* Aro exterior con transición suave */
   .cursor-ring {
-    width: 36px;
-    height: 36px;
-    border: 1px solid light-dark(rgb(253, 253, 253), rgb(255, 255, 255));
-    margin-top: -18px;
-    margin-left: -18px;
-    transition: width 0.3s var(--ease-out-expo),
-                height 0.3s var(--ease-out-expo),
-                margin 0.3s var(--ease-out-expo),
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    mix-blend-mode: difference;
+    margin-top: -19px;
+    margin-left: -19px;
+    transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                margin 0.35s cubic-bezier(0.16, 1, 0.3, 1),
                 border-color 0.3s ease,
                 background-color 0.3s ease;
   }
 
+  /* Estado cuando pasa por encima de botones o enlaces interactivos */
   body.cursor-hover .cursor-dot {
-    transform: scale(0);
+    transform: scale(0.4);
   }
 
   body.cursor-hover .cursor-ring {
-    width: 58px;
-    height: 58px;
-    margin-top: -29px;
-    margin-left: -29px;
-    background-color: light-dark(rgb(250, 250, 250), rgb(255, 255, 255));
-    border-color: light-dark(rgb(255, 255, 255), rgba(255, 255, 255, 0.9));
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
   }
 }
 
@@ -916,16 +923,25 @@ h2 {
   }
 }
 
-/* SCROLL REVEAL */
+    /* 
+   SCROLL REVEAL / CARGA PROGRESIVA DE CONTENIDO
+    */
+
 .reveal-on-scroll {
-  opacity: 0;
-  transform: translateY(35px);
-  transition: opacity 0.9s var(--ease-out-expo), 
-              transform 0.9s var(--ease-out-expo);
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
-.reveal-on-scroll.is-revealed {
+/* Solo se ocultan si el navegador soporta y ejecuta JavaScript correctamente */
+.js-enabled .reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(35px);
+}
+
+.js-enabled .reveal-on-scroll.is-revealed {
   opacity: 1;
   transform: translateY(0);
 }

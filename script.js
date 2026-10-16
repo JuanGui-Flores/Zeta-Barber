@@ -44,13 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. CURSOR CUSTOM PREMIUM (Solo para escritorio con puntero fino)
+  // 4. CURSOR CUSTOM PREMIUM (Punto + Aro con retardo)
   const dot = document.getElementById('cursorDot');
   const ring = document.getElementById('cursorRing');
 
   if (dot && ring) {
-    let mouseX = 0, mouseY = 0;
-    let ringX = 0, ringY = 0;
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let ringX = mouseX, ringY = mouseY;
 
     window.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
@@ -59,8 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function animateCursor() {
-      ringX += (mouseX - ringX) * 0.15;
-      ringY += (mouseY - ringY) * 0.15;
+      ringX += (mouseX - ringX) * 0.12;
+      ringY += (mouseY - ringY) * 0.12;
       ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
       requestAnimationFrame(animateCursor);
     }
@@ -74,26 +75,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 5. REVELADO AL HACER SCROLL (INTERSECTION OBSERVER)
+  document.body.classList.add('js-enabled');
+
   const revealElements = document.querySelectorAll('.hero-copy, .section-head, .service, .strip-item, .statement, .booking-copy, .booking-form, .lookbook-card, .team-card, .faq-item, .map-wrapper');
 
   revealElements.forEach(el => el.classList.add('reveal-on-scroll'));
 
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting || entry.boundingClientRect.top < window.innerHeight) {
         entry.target.classList.add('is-revealed');
         observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: "0px 0px -40px 0px"
+    threshold: 0.05,
+    rootMargin: "0px 0px -20px 0px"
   });
 
   revealElements.forEach(el => revealObserver.observe(el));
 });
 
-/* 6. FUNCIONES GLOBALES (LOOKBOOK & MODALES LEGALES) */
+// 6. FUNCIONES GLOBALES (LOOKBOOK & MODALES LEGALES)
 function selectStyle(serviceName) {
   const serviceSelect = document.getElementById('service');
   if (serviceSelect) {
