@@ -17,7 +17,7 @@
     <meta name="robots" content="index, follow" />
     <link
       rel="canonical"
-      href="[https://zeta-barber-web.vercel.app/](https://zeta-barber-web.vercel.app/)"
+      href="https://zeta-barber-web.vercel.app/"
     />
 
     <!-- FAVICON PARA PESTAÑAS Y GOOGLE SEARCH -->
@@ -46,18 +46,18 @@
     <meta property="og:image" content="assets/corte.png" />
     <meta
       property="og:url"
-      content="[https://zeta-barber-web.vercel.app/](https://zeta-barber-web.vercel.app/)"
+      content="https://zeta-barber-web.vercel.app/"
     />
     <meta property="og:site_name" content="Zeta Barber" />
 
     <!-- SCHEMA.ORG (JSON-LD) -->
     <script type="application/ld+json">
       {
-        "@context": "[https://schema.org](https://schema.org)",
+        "@context": "https://schema.org",
         "@type": "BarberShop",
         "name": "ZETA BARBER",
         "image": "assets/corte.png",
-        "url": "[https://zeta-barber-web.vercel.app/](https://zeta-barber-web.vercel.app/)",
+        "url": "https://zeta-barber-web.vercel.app/",
         "telephone": "+5492644043349",
         "priceRange": "$$",
         "address": {
@@ -80,6 +80,10 @@
   </head>
 
   <body>
+    <!-- ELEMENTOS PARA EL CURCURSOR CUSTOM PREMIUM (Ubicados al inicio) -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
     <div id="site">
       <!-- NAVBAR -->
       <header class="nav">
@@ -440,7 +444,7 @@
           <div class="map-wrapper" style="margin-top: 30px">
             <iframe
               title="Ubicación Zeta Barber San Juan"
-              src="[https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.000000000000!2d-68.5364!3d-31.5375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMyJzE1LjAiUyA2OMKwMzInM1LjAiVw!5e0!3m2!1ses!2sar!4v1600000000000!5m2!1ses!2sar](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.000000000000!2d-68.5364!3d-31.5375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMyJzE1LjAiUyA2OMKwMzInM1LjAiVw!5e0!3m2!1ses!2sar!4v1600000000000!5m2!1ses!2sar)"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.000000000000!2d-68.5364!3d-31.5375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMyJzE1AiUyA2OMKwMzInM1AiVw!5e0!3m2!1ses!2sar!4v1600000000000!5m2!1ses!2sar"
               width="100%"
               height="380"
               style="border: 0; filter: grayscale(1) invert(0.9) contrast(1.2)"
@@ -570,7 +574,7 @@
             <p>📍 Calle 14 y Alfonso 13, San Juan, Argentina</p>
             <p>📱 WhatsApp: +54 9 264 404-3349</p>
             <a
-              href="[https://maps.google.com/?q=Calle+14+y+Alfonso+13+San+Juan](https://maps.google.com/?q=Calle+14+y+Alfonso+13+San+Juan)"
+              href="https://maps.google.com/?q=Calle+14+y+Alfonso+13+San+Juan"
               target="_blank"
               rel="noopener noreferrer"
               class="footer-map-link"
@@ -587,7 +591,7 @@
           <span
             >Desarrollado por
             <a
-              href="[https://instagram.com/florecestudio.ar](https://instagram.com/florecestudio.ar)"
+              href="https://instagram.com/florecestudio.ar"
               target="_blank"
               rel="noopener noreferrer"
               >@florecestudio.ar</a
@@ -611,9 +615,9 @@
       </div>
     </div>
 
-    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <!-- BOTÓN FLOTANTE DE WHATSAPP (CORREGIDO AL NÚMERO REAL) -->
     <a
-      href="https://wa.me/2644043394?text=Hola,%20quiero%20consultar%20por%20un%20turno%20en%20Zeta%20Barber."
+      href="https://wa.me/2644043349?text=Hola,%20quiero%20consultar%20por%20un%20turno%20en%20Zeta%20Barber."
       class="whatsapp-float"
       target="_blank"
       rel="noopener noreferrer"
@@ -637,7 +641,5 @@
     </a>
 
     <script src="script.js"></script>
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
   </body>
 </html>
