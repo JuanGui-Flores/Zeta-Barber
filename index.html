@@ -11,13 +11,19 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://zetabarber.com.ar/">
 
+  <!-- FAVICON PARA PESTAÑAS Y GOOGLE SEARCH -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png">
+  <link rel="shortcut icon" href="assets/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.png">
+
   <!-- GEO-LOCALIZACIÓN Y SEO LOCAL -->
   <meta name="geo.region" content="AR-J">
   <meta name="geo.placename" content="San Juan">
   <meta name="geo.position" content="-31.5375;-68.5364">
   <meta name="ICBM" content="-31.5375, -68.5364">
 
-  <!-- OPEN GRAPH / SOCIAL MEDIA (WhatsApp, Instagram, FB) -->
+  <!-- OPEN GRAPH / SOCIAL MEDIA -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_AR">
   <meta property="og:title" content="ZETA BARBER — Barbería & Estilo Masculino">
@@ -26,13 +32,7 @@
   <meta property="og:url" content="https://zetabarber.com.ar/">
   <meta property="og:site_name" content="Zeta Barber">
 
-  <!-- TWITTER CARDS -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ZETA BARBER — Barbería & Estilo">
-  <meta name="twitter:description" content="Cortes precisos, detalles cuidados y la mejor experiencia de barbería.">
-  <meta name="twitter:image" content="corte.jpg">
-
-  <!-- SCHEMA.ORG / DATOS ESTRUCTURADOS PARA IA Y GEO (JSON-LD) -->
+  <!-- SCHEMA.ORG (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,23 +54,7 @@
       "@type": "GeoCoordinates",
       "latitude": "-31.5375",
       "longitude": "-68.5364"
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      "opens": "09:00",
-      "closes": "20:00"
-    },
-    "sameAs": [
-      "https://instagram.com/florecestudio.ar"
-    ]
+    }
   }
   </script>
 
@@ -79,20 +63,11 @@
 <body>
 <div id="site">
 
-  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-<a href="https://wa.me/5492644043349?text=Hola,%20ZETA%20BARBER.%20Quiero%20consultar%20por%20un%20turno." 
-   target="_blank" 
-   rel="noopener noreferrer" 
-   class="whatsapp-float" 
-   aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 32 32" class="whatsapp-icon">
-    <path fill="currentColor" d="M16 2A13 13 0 0 0 4.2 21.3L2 29.8l8.8-2.1A12.9 12.9 0 0 0 16 30a13 13 0 0 0 0-26zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-4 1 1-3.9-.2-.4a10.6 10.6 0 1 1 9 5zm5.8-8c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7 0a8.8 8.8 0 0 1-2.6-1.6 9.7 9.7 0 0 1-1.8-2.2c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5a.4.4 0 0 0 0-.4c-.1-.2-.7-1.7-1-2.3s-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4A3.7 3.7 0 0 0 7 12.3a6.4 6.4 0 0 0 1.3 3.4 14.8 14.8 0 0 0 5.7 5 18.9 18.9 0 0 0 1.9.7 4.6 4.6 0 0 0 2.1.1 3.5 3.5 0 0 0 2.3-1.6 2.8 2.8 0 0 0 .2-1.6c-.1-.2-.3-.3-.6-.5z"/>
-  </svg>
-</a>
-
   <!-- NAVBAR -->
   <header class="nav">
-    <a class="logo" href="#inicio" aria-label="Zeta Barber inicio"><span>Z</span>ZETA BARBER</a>
+    <a class="logo" href="#inicio" aria-label="Zeta Barber inicio">
+      <img src="assets/logo.png" alt="ZETA BARBER Logo" class="logo-img" style="height:44px; width:auto;">
+    </a>
     <nav class="navlinks" aria-label="Navegación principal">
       <a href="#ecosistema">Ecosistema</a>
       <a href="#servicios">Servicios</a>
@@ -107,8 +82,8 @@
     <section class="hero" id="inicio">
       <div class="hero-copy">
         <div class="eyebrow">Barbería · Estilo · Precisión</div>
-        <h1>Tu estilo. <span>Tus reglas.</span></h1>
-        <p class="lead">Barbería en San Juan. Cortes que hablan por vos y atención enfocada en los detalles.</p>
+        <h1>Tu estilo. <span>Tu marca.</span></h1>
+        <p class="lead">Barbería profesional en San Juan. Cortes modernos, degradés precisos y atención enfocada en los detalles.</p>
         <div class="hero-actions">
           <a class="primary" href="#turnos">Reservá tu turno ↗</a>
           <a class="textlink" href="#servicios">Ver servicios</a>
@@ -118,7 +93,7 @@
       <!-- HERO ARTWORK CON FOTO DE CORTE -->
       <div class="hero-art" aria-label="Corte Zeta Barber San Juan">
         <div class="art-frame"></div>
-        <img src="assets/corte.png" alt="Corte degradé masculino en Zeta Barber San Juan" class="hero-img" loading="eager" width="600" height="800">
+        <img src="corte.jpg" alt="Corte degradé masculino en Zeta Barber San Juan" class="hero-img" loading="eager" width="600" height="800">
         <div class="art-caption">Corte limpio. Actitud propia.</div>
         <div class="art-number">EST. ZETA / BARBER CULTURE</div>
       </div>
@@ -283,11 +258,11 @@
     </section>
   </main>
 
-  <!-- FOOTER ATRACTIVO Y COMPLETO -->
+  <!-- FOOTER AVANZADO Y LEGAL -->
   <footer class="footer-advanced">
     <div class="footer-content">
       <div class="footer-brand">
-        <a class="logo" href="assets/logo.png" target="_blank" rel="noopener noreferrer"><span>Z</span>ZETA BARBER</a>
+        <a class="logo" href="#inicio"><span>Z</span>ZETA BARBER</a>
         <p>Estilo, precisión y presencia en cada detalle. Tu barbería de confianza en San Juan.</p>
       </div>
       <div class="footer-col">
@@ -298,6 +273,14 @@
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#sucursales">Ubicación</a></li>
           <li><a href="#turnos">Turnos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legales & Privacidad</h4>
+        <ul>
+          <li><a href="#modal-privacidad" onclick="openModal('privacidad'); return false;">Política de Privacidad</a></li>
+          <li><a href="#modal-terminos" onclick="openModal('terminos'); return false;">Términos y Condiciones</a></li>
+          <li><a href="#modal-cookies" onclick="openModal('cookies'); return false;">Política de Cookies</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -313,6 +296,26 @@
       <span>Desarrollado por <a href="https://instagram.com/florecestudio.ar" target="_blank" rel="noopener noreferrer">@florecestudio.ar</a></span>
     </div>
   </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="https://wa.me/5492644043349?text=Hola,%20ZETA%20BARBER.%20Quiero%20consultar%20por%20un%20turno." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="whatsapp-float" 
+     aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32" class="whatsapp-icon">
+      <path fill="currentColor" d="M16 2A13 13 0 0 0 4.2 21.3L2 29.8l8.8-2.1A12.9 12.9 0 0 0 16 30a13 13 0 0 0 0-26zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-4 1 1-3.9-.2-.4a10.6 10.6 0 1 1 9 5zm5.8-8c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7 0a8.8 8.8 0 0 1-2.6-1.6 9.7 9.7 0 0 1-1.8-2.2c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5a.4.4 0 0 0 0-.4c-.1-.2-.7-1.7-1-2.3s-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4A3.7 3.7 0 0 0 7 12.3a6.4 6.4 0 0 0 1.3 3.4 14.8 14.8 0 0 0 5.7 5 18.9 18.9 0 0 0 1.9.7 4.6 4.6 0 0 0 2.1.1 3.5 3.5 0 0 0 2.3-1.6 2.8 2.8 0 0 0 .2-1.6c-.1-.2-.3-.3-.6-.5z"/>
+    </svg>
+  </a>
+
+  <!-- MODAL LEGAL OVERLAY -->
+  <div id="legalModal" class="legal-modal" role="dialog" aria-hidden="true">
+    <div class="legal-modal-content">
+      <button class="legal-modal-close" onclick="closeModal()" aria-label="Cerrar modal">&times;</button>
+      <div id="legalModalBody"></div>
+    </div>
+  </div>
+
 </div>
 
 <script>
@@ -339,6 +342,51 @@ document.getElementById('bookingForm').addEventListener('submit', function(event
   
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(details)}`, '_blank', 'noopener,noreferrer');
   document.getElementById('formNotice').textContent = 'Se abrió WhatsApp con tu consulta preparada.';
+});
+
+/* LÓGICA DE MODALES LEGALES */
+const legalTexts = {
+  privacidad: `
+    <h2>Política de Privacidad</h2>
+    <p>En <strong>ZETA BARBER</strong> nos tomamos en serio la privacidad de nuestros usuarios y clientes en cumplimiento de la Ley N° 25.326 de Protección de Datos Personales de Argentina.</p>
+    <p><strong>1. Recopilación de Datos:</strong> Los datos ingresados voluntariamente en el formulario de consultas (nombre, servicio de interés y preferencia de turno) se utilizan exclusivamente para estructurar la comunicación enviada a través de WhatsApp.</p>
+    <p><strong>2. Uso de la Información:</strong> No almacenamos ni vendemos información personal a terceros. La gestión del turno se coordina de manera directa por mensajería.</p>
+    <p><strong>3. Derechos del Usuario:</strong> El usuario puede solicitar en cualquier momento la modificación o eliminación de sus datos de contacto en nuestras conversaciones de WhatsApp.</p>
+  `,
+  terminos: `
+    <h2>Términos y Condiciones</h2>
+    <p>Bienvenido a la plataforma web de <strong>ZETA BARBER</strong>. Al utilizar nuestro sitio web y formulario de reserva, aceptas las siguientes condiciones:</p>
+    <p><strong>1. Solicitud de Turnos:</strong> La reserva enviada mediante el sitio web constituye una consulta previa de disponibilidad. El turno solo quedará confirmado formalmente una vez respondido el mensaje por parte del equipo de ZETA BARBER.</p>
+    <p><strong>2. Precios y Servicios:</strong> Los precios informados en el sitio web o por mensajería están sujetos a modificaciones según la complejidad del servicio acordado.</p>
+    <p><strong>3. Propiedad Intelectual:</strong> Todo el diseño, marca, contenido y código del sitio son propiedad de ZETA BARBER y están protegidos legalmente.</p>
+  `,
+  cookies: `
+    <h2>Política de Cookies</h2>
+    <p>Este sitio web utiliza tecnologías estándar de navegación y almacenamiento local únicamente para mejorar la experiencia del usuario.</p>
+    <p><strong>1. Cookies Técnicas:</strong> Permiten la correcta visualización de la interfaz, adaptación responsive a móviles y preferencia de fechas en los formularios.</p>
+    <p><strong>2. Cookies de Terceros:</strong> No utilizamos rastreadores publicitarios invasivos ni vendemos datos de navegación a redes de mercadotecnia externa.</p>
+    <p>Podés desactivar el uso de cookies en cualquier momento ajustando la configuración de tu navegador web.</p>
+  `
+};
+
+function openModal(type) {
+  const modal = document.getElementById('legalModal');
+  const body = document.getElementById('legalModalBody');
+  if (legalTexts[type]) {
+    body.innerHTML = legalTexts[type];
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+  }
+}
+
+function closeModal() {
+  const modal = document.getElementById('legalModal');
+  modal.classList.remove('active');
+  modal.setAttribute('aria-hidden', 'true');
+}
+
+document.getElementById('legalModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
 });
 </script>
 </body>
