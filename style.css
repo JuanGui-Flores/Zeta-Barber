@@ -873,7 +873,7 @@ h2 {
   .cursor-dot {
     width: 6px;
     height: 6px;
-    background-color: light-dark(#111111, #ffffff);
+    background-color: #ffffff;
     margin-top: -3px;
     margin-left: -3px;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -882,7 +882,7 @@ h2 {
   .cursor-ring {
     width: 36px;
     height: 36px;
-    border: 1px solid light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
+    border: 1px solid light-dark(rgb(253, 253, 253), rgb(255, 255, 255));
     margin-top: -18px;
     margin-left: -18px;
     transition: width 0.3s var(--ease-out-expo),
@@ -901,8 +901,8 @@ h2 {
     height: 58px;
     margin-top: -29px;
     margin-left: -29px;
-    background-color: light-dark(rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.08));
-    border-color: light-dark(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.9));
+    background-color: light-dark(rgb(250, 250, 250), rgb(255, 255, 255));
+    border-color: light-dark(rgb(255, 255, 255), rgba(255, 255, 255, 0.9));
   }
 }
 
