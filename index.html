@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZETA BARBER — Barbería</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="site">
+<header class="nav"><a class="logo" href="#inicio" aria-label="Zeta Barber inicio"><span>Z</span>ZETA BARBER</a><nav class="navlinks"><a href="#servicios">Servicios</a><a href="#nosotros">La barbería</a><a href="#turnos">Turnos</a></nav><a class="book" href="#turnos">Reservar turno ↗</a></header>
+<main>
+<section class="hero" id="inicio"><div class="hero-copy"><div class="eyebrow">Barbería · Estilo · Precisión</div><h1>Tu estilo.<span>Tu marca.</span></h1><p class="lead">Cortes precisos, detalles cuidados y una experiencia pensada para que salgas con tu mejor versión.</p><div class="hero-actions"><a class="primary" href="#turnos">Reservá tu turno ↗</a><a class="textlink" href="#servicios">Ver servicios</a></div></div><div class="hero-art" aria-label="Diseño gráfico abstracto de Zeta Barber"><div class="art-frame"></div><div class="art-circle"><div class="art-mark">ZB</div></div><div class="art-caption">Corte limpio. Actitud propia.</div><div class="art-number">EST. ZETA / BARBER CULTURE</div></div></section>
+<div class="strip"><div class="strip-item"><strong>01 / Precisión</strong><span>Cada detalle importa</span></div><div class="strip-item"><strong>02 / Identidad</strong><span>Un estilo que habla por vos</span></div><div class="strip-item"><strong>03 / Experiencia</strong><span>Tu momento, tu espacio</span></div></div>
+<section class="section" id="servicios"><div class="section-head"><div><div class="eyebrow">Lo que hacemos</div><h2>Servicios<br>de barbería.</h2></div><p class="section-note">Elegí tu servicio y encontrá el estilo que mejor va con vos. Los precios se pueden completar cuando estén definidos.</p></div><div class="services"><article class="service"><span class="service-num">01 — CORTE</span><h3>Corte clásico / moderno</h3><p>Un corte personalizado, prolijo y adaptado a tu estilo.</p><div class="service-price">Precio a consultar</div></article><article class="service"><span class="service-num">02 — FADE</span><h3>Degradé / fade</h3><p>Transiciones limpias, contornos definidos y terminación precisa.</p><div class="service-price">Precio a consultar</div></article><article class="service"><span class="service-num">03 — BARBA</span><h3>Perfilado de barba</h3><p>Diseño, simetría y detalles para completar tu look.</p><div class="service-price">Precio a consultar</div></article><article class="service"><span class="service-num">04 — COMBO</span><h3>Corte + barba</h3><p>Una experiencia completa para renovar tu imagen.</p><div class="service-price">Precio a consultar</div></article><article class="service"><span class="service-num">05 — DETALLE</span><h3>Contornos</h3><p>Repaso de líneas y terminaciones para mantener el corte.</p><div class="service-price">Precio a consultar</div></article><article class="service"><span class="service-num">06 — A TU MEDIDA</span><h3>Consultá tu estilo</h3><p>¿Tenés una idea en mente? Hablemos del corte que buscás.</p><a class="textlink" href="#turnos" style="align-self:flex-start;margin-top:22px">Consultar ↗</a></article></div></section>
+<section class="statement" id="nosotros"><div><div class="eyebrow">Zeta Barber</div><h2>No es solo un corte.<br>Es cómo te presentás.</h2></div><p>Un espacio para bajar un cambio, renovar el look y salir con confianza. Diseño minimalista, trabajo detallista y actitud propia.</p></section>
+<section class="section booking" id="turnos"><div class="booking-copy"><div class="eyebrow">Tu próximo corte</div><h2>Hablemos<br>por WhatsApp.</h2><p>Consultá por servicios, disponibilidad y turnos directamente con ZETA BARBER. Completá tus datos y prepararemos el mensaje para enviarlo por WhatsApp.</p><p><strong>Ubicación:</strong> Calle 14 y Alfonso 13<br><strong>Consultas:</strong> atención por WhatsApp</p></div><form class="booking-form" id="bookingForm"><div class="field"><label for="name">Nombre</label><input id="name" name="name" placeholder="Tu nombre" required></div><div class="field"><label for="service">Servicio o consulta</label><select id="service" name="service" required><option value="">Elegí un servicio</option><option>Corte clásico / moderno</option><option>Degradé / fade</option><option>Perfilado de barba</option><option>Corte + barba</option><option>Contornos</option><option>Consulta general</option></select></div><div class="field"><label for="date">Día preferido (opcional)</label><input id="date" name="date" type="date"></div><div class="field"><label for="time">Horario preferido (opcional)</label><select id="time" name="time"><option value="">Sin preferencia</option><option>Mañana</option><option>Mediodía</option><option>Tarde</option></select></div><button class="primary" type="submit">Consultar por WhatsApp ↗</button><div class="notice" id="formNotice" role="status" aria-live="polite"></div></form></section>
+</main><footer class="footer"><span>© <span id="year"></span> ZETA BARBER</span><span>Estilo en cada detalle.</span><a href="#inicio">Volver arriba ↑</a></footer>
+</div>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const WHATSAPP_NUMBER = '5492644043349'; // Número de WhatsApp de ZETA BARBER, en formato internacional.
+const dateInput = document.getElementById('date');
+const today = new Date();
+const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0,10);
+dateInput.min = localDate;
+document.getElementById('bookingForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const service = document.getElementById('service').value;
+  const date = document.getElementById('date').value;
+  const time = document.getElementById('time').value;
+  const details = [`Hola, ZETA BARBER. Soy ${name}.`, `Quiero consultar por: ${service}.`, date ? `Día preferido: ${date}.` : '', time ? `Horario preferido: ${time}.` : '', '¿Me pueden informar disponibilidad y precio?'].filter(Boolean).join('\n');
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(details)}`, '_blank', 'noopener,noreferrer');
+  document.getElementById('formNotice').textContent = 'Se abrió WhatsApp con tu consulta preparada.';
+});
+</script>
+</body>
+</html>
