@@ -44,25 +44,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. CURSOR CUSTOM PREMIUM (Punto + Aro con retardo)
+// 4. CURSOR CUSTOM PREMIUM (Punto + Aro con retardo fluido)
   const dot = document.getElementById('cursorDot');
   const ring = document.getElementById('cursorRing');
 
   if (dot && ring) {
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
+    let dotX = mouseX, dotY = mouseY;
     let ringX = mouseX, ringY = mouseY;
 
     window.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
     });
 
     function animateCursor() {
+      // El punto interior sigue al mouse de cerca (interpolación rápida)
+      dotX += (mouseX - dotX) * 0.3;
+      dotY += (mouseY - dotY) * 0.3;
+      dot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0)`;
+
+      // El aro exterior sigue al mouse con un retraso más notable (interpolación suave)
       ringX += (mouseX - ringX) * 0.12;
       ringY += (mouseY - ringY) * 0.12;
       ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
+      
       requestAnimationFrame(animateCursor);
     }
     animateCursor();

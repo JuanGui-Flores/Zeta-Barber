@@ -852,12 +852,12 @@ h2 {
   opacity: 0.6;
 }
 
-/* =========================================================
-   CURSOR CUSTOM PREMIUM (Punto blanco fijo + Aro con retardo)
-   ========================================================= */
+/* ---------- CURSOR PERSONALIZADO ---------- */
+
 @media (pointer: fine) {
+  /* Oculta el cursor nativo de Windows/Mac solo en pantallas con mouse */
   body {
-    cursor: none; /* Oculta el cursor nativo en computadoras */
+    cursor: none !important;
   }
 
   .cursor-dot,
@@ -866,31 +866,32 @@ h2 {
     top: 0;
     left: 0;
     pointer-events: none;
-    z-index: 99999;
     border-radius: 50%;
-    transform: translate3d(-100px, -100px, 0);
     will-change: transform;
+    transform: translate3d(-100px, -100px, 0);
   }
 
-  /* Punto central totalmente blanco con inversión inteligente para fondos claros */
+  /* Punto interior (Blanco brillante, 8px centrados) */
   .cursor-dot {
-    width: 8px;
-    height: 8px;
+    z-index: 99999;
+    width: 8px !important;
+    height: 8px !important;
     background-color: #ffffff;
-    mix-blend-mode: difference; /* Esto hace que se adapte y siempre resalte sin importar el fondo */
+    mix-blend-mode: difference;
     margin-top: -4px;
     margin-left: -4px;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition: transform 0.2s ease;
   }
 
-  /* Aro exterior con transición suave */
+  /* Aro exterior (36px centrados con retardo) */
   .cursor-ring {
-    width: 38px;
-    height: 38px;
+    z-index: 99998;
+    width: 36px !important;
+    height: 36px !important;
     border: 1px solid rgba(255, 255, 255, 0.6);
     mix-blend-mode: difference;
-    margin-top: -19px;
-    margin-left: -19px;
+    margin-top: -18px;
+    margin-left: -18px;
     transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
                 height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
                 margin 0.35s cubic-bezier(0.16, 1, 0.3, 1),
@@ -898,21 +899,22 @@ h2 {
                 background-color 0.3s ease;
   }
 
-  /* Estado cuando pasa por encima de botones o enlaces interactivos */
+  /* Efecto al pasar por botones o enlaces */
   body.cursor-hover .cursor-dot {
     transform: scale(0.4);
   }
 
   body.cursor-hover .cursor-ring {
-    width: 60px;
-    height: 60px;
-    margin-top: -30px;
-    margin-left: -30px;
-    background-color: rgba(255, 255, 255, 0.1);
+    width: 58px !important;
+    height: 58px !important;
+    margin-top: -29px;
+    margin-left: -29px;
+    background-color: rgba(255, 255, 255, 0.08);
     border-color: #ffffff;
   }
 }
 
+/* En celulares o pantallas táctiles se oculta y vuelve el cursor normal */
 @media (pointer: coarse) {
   .cursor-dot,
   .cursor-ring {
@@ -920,6 +922,30 @@ h2 {
   }
   body {
     cursor: auto !important;
+  }
+}
+
+/* El cursor personalizado solo se usa en dispositivos con puntero */
+@media (hover: hover) and (pointer: fine) {
+  body.custom-cursor,
+  body.custom-cursor a,
+  body.custom-cursor button,
+  body.custom-cursor [role="button"] {
+    cursor: none;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+
+  body,
+  a,
+  button,
+  [role="button"] {
+    cursor: auto;
   }
 }
 
